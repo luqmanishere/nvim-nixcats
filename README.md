@@ -1,18 +1,13 @@
-# This is the help for the nixCats lazy wrapper
+# nvim-nixcats
 
-Or well, most of the help for it. There is also help for it at [:h nixCats.luaUtils](../../nixCatsHelp/luaUtils.txt)
+A neovim config made with nixCats-nvim.
 
-It is the entirety of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) with very few changes, but uses nixCats to download everything
+## Usage
 
-enter a new directory then run:
+This flake has exports for NixOS & Home Manager modules, aswell as standalone packages.
 
-`nix flake init -t github:BirdeeHub/nixCats-nvim#kickstart-nvim`
+## Credits
 
-then to build, `nix build .`
-
-and the result will be found at `./result/bin/nixCats` (or with a different name if you changed it before building)
-
-It also can work without any nix whatsoever.
-It has been adapted such that it works either way!
-
-All notes about the lazy wrapper are in comments that begin with the string: `NOTE: nixCats:` so to find all of the info, search for that.
+- BirdeeHub for [`nixCats-nvim`](https://github.com/BirdeeHub/nixCats-nvim)
+- Nix team for Nix
+- And the neovim parts to whoever their respective owners
