@@ -116,15 +116,19 @@
       # this includes LSPs
       lspsAndRuntimeDeps = with pkgs; {
         general = [
+          # general
           universal-ctags
           ripgrep
           fd
           stdenv.cc.cc
-          nix-doc
+          # lua
           lua-language-server
-          nixd
           stylua
+          # nix
           alejandra
+          nixd
+          nix-doc
+          # rust
           rust-analyzer
         ];
         kickstart-debug = [
@@ -195,16 +199,16 @@
           bufferline-nvim
           indent-blankline-nvim
           todo-comments-nvim
-              trouble-nvim
-              flash-nvim
+          trouble-nvim
+          flash-nvim
           neo-tree-nvim
         ];
-            
-            rust = [
-              rustaceanvim
-              neotest
-              crates-nvim
-            ];
+
+        rust = [
+          rustaceanvim
+          neotest
+          crates-nvim
+        ];
       };
 
       # not loaded automatically at startup.
@@ -298,7 +302,7 @@
           # but we can still send the info from nix to lua that we want it!
           kickstart-gitsigns = true;
           nice-ui = true;
-            rust = true;
+          rust = true;
 
           # we can pass whatever we want actually.
           have_nerd_font = true;
