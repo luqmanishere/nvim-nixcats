@@ -108,12 +108,9 @@ return {
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = cmp.config.sources {
-          {
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' },
-            { name = 'path' },
-          },
-          sources,
+          { name = 'nvim_lsp' },
+          { name = 'luasnip' },
+          { name = 'path' },
         },
         experimental = {
           ghost_text = {
