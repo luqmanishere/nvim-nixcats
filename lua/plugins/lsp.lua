@@ -41,7 +41,7 @@ return {
       },
       -- kickstart.nvim was still on neodev. lazydev is the new version of neodev
     },
-    config = function()
+    config = function(_, opts)
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -182,7 +182,7 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       -- NOTE: nixCats: there is help in nixCats for lsps at `:h nixCats.LSPs` and also `:h nixCats.luaUtils`
-      local servers = {}
+      local servers = opts.servers
       -- servers.clangd = {},
       -- servers.gopls = {},
       -- servers.pyright = {},

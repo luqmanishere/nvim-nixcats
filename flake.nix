@@ -130,6 +130,11 @@
           nix-doc
           # rust
           rust-analyzer
+          # markdown
+          # markdown-toc # this is not in nixpkgs
+          markdownlint-cli2
+          nodePackages_latest.prettier
+          marksman
         ];
         kickstart-debug = [
           delve
@@ -161,6 +166,7 @@
           cmp_luasnip
           cmp-nvim-lsp
           cmp-path
+          cmp-git
           tokyonight-nvim
           todo-comments-nvim
           mini-nvim
@@ -202,12 +208,19 @@
           trouble-nvim
           flash-nvim
           neo-tree-nvim
+          lualine-nvim
+          dashboard-nvim
+          nvim-notify
         ];
 
         rust = [
           rustaceanvim
           neotest
           crates-nvim
+        ];
+        markdown = [
+          markdown-preview-nvim
+          render-markdown
         ];
       };
 
@@ -303,6 +316,7 @@
           kickstart-gitsigns = true;
           nice-ui = true;
           rust = true;
+          markdown = true;
 
           # we can pass whatever we want actually.
           have_nerd_font = true;
