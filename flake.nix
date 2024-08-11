@@ -167,6 +167,7 @@
           cmp-nvim-lsp
           cmp-path
           cmp-git
+          cmp-emoji
           tokyonight-nvim
           todo-comments-nvim
           mini-nvim

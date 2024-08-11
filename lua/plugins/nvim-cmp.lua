@@ -38,13 +38,16 @@ return {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
     },
-    config = function()
+    opts = function(_, opts)
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
+      local defaults = require 'cmp.config.default'()
       luasnip.config.setup {}
 
-      cmp.setup {
+      local sources = opts.sources or {}
+
+      return {
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -104,11 +107,20 @@ return {
           -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
-        sources = {
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' },
-          { name = 'path' },
+        sources = cmp.config.sources {
+          {
+            { name = 'nvim_lsp' },
+            { name = 'luasnip' },
+            { name = 'path' },
+          },
+          sources,
         },
+        experimental = {
+          ghost_text = {
+            hl_group = 'CmpGhostText',
+          },
+        },
+        sorting = defaults.sorting,
       }
     end,
   },
