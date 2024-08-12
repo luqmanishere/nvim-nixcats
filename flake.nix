@@ -135,6 +135,8 @@
           markdownlint-cli2
           nodePackages_latest.prettier
           marksman
+          # toml
+          taplo
         ];
         kickstart-debug = [
           delve
