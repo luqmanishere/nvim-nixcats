@@ -37,6 +37,7 @@ if require('nixCatsUtils').enableForCategory 'rust' then
       opts = {
         server = {
           on_attach = function(_, bufnr)
+            vim.lsp.inlay_hint.enable(true, { bufnr })
             vim.keymap.set('n', '<leader>cR', function()
               vim.cmd.RustLsp 'codeAction'
             end, { desc = 'Code Action', buffer = bufnr })
