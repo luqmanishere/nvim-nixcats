@@ -176,6 +176,7 @@
           nvim-treesitter.withAllGrammars
           neo-tree-nvim
           nui-nvim
+          auto-save-nvim
           # nixCats will filter out duplicate packages
           # so you can put dependencies with stuff even if they're
           # also somewhere else
@@ -215,7 +216,6 @@
           dashboard-nvim
           nvim-notify
         ];
-
         rust = [
           rustaceanvim
           neotest
