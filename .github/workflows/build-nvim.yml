@@ -10,7 +10,7 @@ jobs:
   build-devenv:
     strategy:
       matrix:
-        runs-on: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
