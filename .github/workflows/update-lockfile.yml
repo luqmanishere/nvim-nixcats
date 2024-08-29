@@ -1,0 +1,30 @@
+name: update-lockfile
+on:
+  workflow_dispatch: # allows manual triggering
+  schedule:
+    - cron: '0 4 * * *' # runs every day at 04:00
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v11
+      - name: Update flake.lock
+        id: update
+        uses: DeterminateSystems/update-flake-lock@v23
+        with:
+          token: ${{ secrets.FLAKE_LOCK_TOKEN }}
+          pr-title: 'Update flake.lock' # Title of PR to be created
+          pr-labels: | # Labels to be set on the PR
+            dependencies
+            automated
+      - name: Enable automerge on flake update PRs
+        run: gh pr merge --merge --auto "$PR_NUMBER" --repo "$OWNER/$REPO"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+          PR_NUMBER: ${{ steps.update.outputs.pull-request-number }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
