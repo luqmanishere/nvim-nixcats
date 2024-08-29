@@ -1,0 +1,27 @@
+name: 'Build nvim-nixcats'
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-devenv:
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v11
+      - name: Use Cachix
+        uses: cachix/cachix-action@v14
+        with:
+          name: nix-conf
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+      - name: Build devenv
+        run: nix build --accept-flake-config
+      - name: Check version
+        run: nix run --accept-flake-config . -- --version
