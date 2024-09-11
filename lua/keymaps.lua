@@ -114,3 +114,5 @@ map('i', 'kj', '<Esc>')
 map('n', '<leader>fs', '<cmd>w<cr>', { desc = 'Save the current file' })
 
 map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit Neovim' })
+
+map('n', 'q', '<cmd>close<cr>', { desc = 'Close window' })

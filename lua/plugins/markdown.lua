@@ -83,34 +83,39 @@ return {
 
   {
     'MeanderingProgrammer/render-markdown.nvim',
+    name = 'render-markdown',
     opts = {
-      file_types = { 'markdown', 'norg', 'rmd', 'org' },
+      file_types = { 'markdown', 'norg', 'rmd', 'org', 'gitcommit' },
       code = {
         sign = false,
         width = 'block',
         right_pad = 1,
       },
       heading = {
-        sign = false,
-        icons = {},
+        enabled = true,
+        sign = true,
+      },
+      pipe_table = {
+        enabled = true,
+        preset = 'round',
+      },
+      injections = {
+        gitcommit = {
+          enabled = true,
+          query = [[
+                ((message) @injection.content
+                    (#set! injection.combined)
+                    (#set! injection.include-children)
+                    (#set! injection.language "markdown"))
+            ]],
+        },
       },
     },
     ft = { 'markdown', 'norg', 'rmd', 'org' },
-    -- config = function(_, opts)
-    --   -- LazyVim.toggle.map('<leader>um', {
-    --   --   name = 'Render Markdown',
-    --   --   get = function()
-    --   --     return require('render-markdown.state').enabled
-    --   --   end,
-    --   --   set = function(enabled)
-    --   --     local m = require 'render-markdown'
-    --   --     if enabled then
-    --   --       m.enable()
-    --   --     else
-    --   --       m.disable()
-    --   --     end
-    --   --   end,
-    --   -- })
-    -- end,
+    config = function(_, opts)
+      require('render-markdown').setup(opts)
+
+      -- TODO: setup keybinds for note taking
+    end,
   },
 }

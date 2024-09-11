@@ -28,8 +28,9 @@ if require('nixCatsUtils').isNixCats then
   -- it wasnt detecting that these were already added
   -- because the names are slightly different from the url.
   -- when that happens, add them to the list, then also specify the new name in the lazySpec
-  pluginList[ [[Comment.nvim]] ] = ''
-  pluginList[ [[LuaSnip]] ] = ''
+  pluginList[ [[Comment.nvim]] ] = '' -- comment.nvim
+  pluginList[ [[LuaSnip]] ] = '' -- luasnip
+  pluginList[ [[render-markdown.nvim]] ] = '' -- render-markdown
   -- alternatively you can do it all in the plugins spec instead of modifying this list.
   -- just set the name and then add `dev = require('nixCatsUtils').lazyAdd(false, true)` to the spec
 
