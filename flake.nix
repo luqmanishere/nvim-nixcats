@@ -223,7 +223,7 @@
         ];
         markdown = [
           markdown-preview-nvim
-          render-markdown
+          render-markdown-nvim
         ];
       };
 
