@@ -32,7 +32,7 @@ if require('nixCatsUtils').enableForCategory 'rust' then
     {
       'mrcjkb/rustaceanvim',
       enabled = require('nixCatsUtils').enableForCategory 'rust',
-      version = '^4', -- Recommended
+      version = '^5', -- Recommended
       ft = { 'rust' },
       opts = {
         server = {
