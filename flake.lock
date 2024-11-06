@@ -36,10 +36,27 @@
         "type": "github"
       }
     },
+    "plugins-eagle-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730074768,
+        "narHash": "sha256-MkNmphWhLVIw/EHh1GrGjVqrVJsKpE0R0VtHHiwhG1o=",
+        "owner": "soulis-1256",
+        "repo": "eagle.nvim",
+        "rev": "e42dbd42b73b10fdf12fd06172e116cdb6637537",
+        "type": "github"
+      },
+      "original": {
+        "owner": "soulis-1256",
+        "repo": "eagle.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugins-eagle-nvim": "plugins-eagle-nvim"
       }
     }
   },

@@ -34,6 +34,11 @@
     # overlay defined for custom builds in the overlays directory.
     # for specific tags, branches and commits, see:
     # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
+    # NOTE: Manually rename these in category definitions
+    plugins-eagle-nvim = {
+      url = "github:soulis-1256/eagle.nvim";
+      flake = false;
+    };
   };
 
   # see :help nixCats.flake.outputs
@@ -181,6 +186,7 @@
           # also somewhere else
           nvim-web-devicons
           plenary-nvim
+          (pkgs.neovimPlugins.eagle-nvim.overrideAttrs {pname = "eagle.nvim";})
           # This is for if you only want some of the grammars
           # (nvim-treesitter.withPlugins (
           #   plugins: with plugins; [
@@ -217,6 +223,7 @@
           lualine-nvim
           dashboard-nvim
           nvim-notify
+          tabby-nvim
         ];
         rust = [
           rustaceanvim
