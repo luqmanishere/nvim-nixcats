@@ -170,7 +170,6 @@
           cmp-path
           cmp-git
           cmp-emoji
-          tokyonight-nvim
           todo-comments-nvim
           mini-nvim
           nvim-treesitter.withAllGrammars
@@ -189,6 +188,9 @@
           #     lua
           #   ]
           # ))
+          # NOTE: All the themes
+          tokyonight-nvim
+          nightfox-nvim
         ];
         kickstart-debug = [
           nvim-dap
