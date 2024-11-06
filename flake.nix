@@ -187,6 +187,7 @@
           nvim-web-devicons
           plenary-nvim
           (pkgs.neovimPlugins.eagle-nvim.overrideAttrs {pname = "eagle.nvim";})
+          lsp_lines-nvim
           # This is for if you only want some of the grammars
           # (nvim-treesitter.withPlugins (
           #   plugins: with plugins; [
