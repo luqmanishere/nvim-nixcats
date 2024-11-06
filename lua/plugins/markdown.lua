@@ -83,7 +83,8 @@ return {
 
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    name = 'render-markdown',
+    -- different downloaded name
+    -- name = 'render-markdown-nvim',
     opts = {
       file_types = { 'markdown', 'norg', 'rmd', 'org', 'gitcommit' },
       code = {
