@@ -1,3 +1,6 @@
+if true then -- disable this module
+  return {}
+end
 return {
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
