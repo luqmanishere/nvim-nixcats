@@ -2,33 +2,6 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
-  {
-    'nvim-neo-tree/neo-tree.nvim',
-    -- NOTE: nixCats: return true only if category is enabled, else false
-    enabled = require('nixCatsUtils').enableForCategory 'general',
-    version = '*',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
-      'MunifTanjim/nui.nvim',
-    },
-    cmd = 'Neotree',
-    keys = {
-      { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
-      { '<leader>e', '<cmd>Neotree toggle<cr>', { desc = 'Toggle Neotree' } },
-      { '<leader>o', '<cmd>Neotree focus<cr>', { desc = 'Focus Neotree' } },
-    },
-    opts = {
-      filesystem = {
-        window = {
-          mappings = {
-            ['\\'] = 'close_window',
-          },
-        },
-      },
-    },
-  },
-
   -- Flash enhances the built in search functionality by showing labels at the end of each match,
   -- making jumping around way faster
   {

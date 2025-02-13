@@ -1,3 +1,7 @@
+-- disabled
+if true then
+  return {}
+end
 return {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',

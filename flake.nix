@@ -38,6 +38,11 @@
       url = "github:soulis-1256/eagle.nvim";
       flake = false;
     };
+    # TODO: remove this once we dont need bleeding edge
+    plugins-snacks-nvim = {
+      url = "github:folke/snacks.nvim";
+      flake = false;
+    };
   };
 
   # see :help nixCats.flake.outputs
@@ -168,6 +173,7 @@
           fidget-nvim
           conform-nvim
           luasnip
+          # snacks-nvim
           # nvim-cmp
           # cmp_luasnip
           # cmp-nvim-lsp
@@ -187,6 +193,7 @@
           nvim-web-devicons
           plenary-nvim
           (pkgs.neovimPlugins.eagle-nvim.overrideAttrs {pname = "eagle.nvim";})
+          (pkgs.neovimPlugins.snacks-nvim.overrideAttrs {pname = "snacks.nvim";})
           lsp_lines-nvim
           # This is for if you only want some of the grammars
           # (nvim-treesitter.withPlugins (

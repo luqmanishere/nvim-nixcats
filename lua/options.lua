@@ -78,3 +78,4 @@ vim.opt.virtualedit = 'block'
 vim.o.showtabline = 2 -- always show tabline
 vim.o.mousemoveevent = true
 vim.o.wrap = false
+vim.o.cmdheight = 0
