@@ -50,11 +50,11 @@
     "plugins-snacks-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740575341,
-        "narHash": "sha256-7UbzP7d313TJ8/Ikk85n9Qd1JMwH0qEvEGML1P8cRpo=",
+        "lastModified": 1740642367,
+        "narHash": "sha256-EOo2ADp8CM09MQdIsd5FASGkqR/wH25zIt4Zq8woTpQ=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "1239fb84bc426d4fcd1c8dc9dde8503c17501842",
+        "rev": "07f4b9adff7af45a7e0eb22d85a422e32ed4b1ca",
         "type": "github"
       },
       "original": {
