@@ -231,7 +231,7 @@
           lualine-nvim
           dashboard-nvim
           nvim-notify
-          tabby-nvim
+          # tabby-nvim
         ];
         rust = [
           rustaceanvim

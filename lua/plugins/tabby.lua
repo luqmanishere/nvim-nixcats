@@ -1,5 +1,8 @@
+-- Disabled
+if true then
+  return {}
+end
 -- A highly configurable, and neovim style tabline plugin. Use your nvim tabs as a workspace multiplexer!
-
 return {
   'nanozuki/tabby.nvim',
   -- event = 'VimEnter', -- if you want lazy load, see below

@@ -1,7 +1,3 @@
--- Disabled
-if true then
-  return {}
-end
 return {
   {
     'akinsho/bufferline.nvim',
@@ -24,9 +20,13 @@ return {
     },
     opts = {
       options = {
+        close_command = function(n)
+          Snacks.bufdelete(n)
+        end,
+        right_mouse_command = function(n)
+          Snacks.bufdelete(n)
+        end,
         diagnostics = 'nvim_lsp',
-        style = 'underline',
-        color_icons = true,
         always_show_bufferline = false,
         offsets = {
           {
@@ -34,6 +34,9 @@ return {
             text = 'Neo-tree',
             highlight = 'Directory',
             text_align = 'left',
+          },
+          {
+            filetype = 'snacks_layout_box',
           },
         },
       },
