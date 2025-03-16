@@ -146,6 +146,10 @@
           marksman
           # toml
           taplo
+          # python
+          pyright
+          basedpyright
+          ruff
         ];
         kickstart-debug = [
           delve
