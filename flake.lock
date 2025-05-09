@@ -34,11 +34,11 @@
     "plugins-eagle-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742498531,
-        "narHash": "sha256-ehGj32jIVFzDjpAGwdd4WPB/QBoJESdfHHj5yp78VHs=",
+        "lastModified": 1746749394,
+        "narHash": "sha256-u5Krlo8S4cH6JdBZzRGT4b7EkUUXmu3FihxYR1m9lwA=",
         "owner": "soulis-1256",
         "repo": "eagle.nvim",
-        "rev": "8ff26a069d9b4cc4b1c053b465a81e07b7e65623",
+        "rev": "dd1a28c4d8626fbe85580b0a9ed8f88d77a26da1",
         "type": "github"
       },
       "original": {
